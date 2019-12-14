@@ -5,7 +5,7 @@ import pymysql
 from sqlalchemy import create_engine
 import re
 
-
+# Extracting a list of all the websites
 def link_extractor():
     url = "https://arts.uchicago.edu/events/search?tid%5B%5D=1&tid%5B%5D=2&tid%5B%5D=3&tid%5B%5D=192&tid%5B%5D=41&tid%5B%5D=195&tid%5B%5D=42&tid%5B%5D=43&tid%5B%5D=44&tid%5B%5D=214&title=&field_date_time_value%5Bvalue%5D%5Bdate%5D=2019-10-18&field_date_time_value2%5Bvalue%5D%5Bdate%5D=2019-12-31"
     headers = {'User-Agent': 'Mozilla/5.0'}
@@ -41,7 +41,7 @@ def link_extractor():
                 
     return all_events
             
-
+# Individually crawling all the websites and extracting the necessary information
 def main_crawler():
     
     a = link_extractor()

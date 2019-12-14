@@ -5,7 +5,7 @@ import pymysql
 from sqlalchemy import create_engine
 import re
 
-
+# Extracting a list of all the websites
 def link_extractor():
     url = "https://www.uchicago.edu/students/events/"
     headers = {'User-Agent': 'Mozilla/5.0'}
@@ -23,7 +23,7 @@ def link_extractor():
                 
     return all_events
             
-
+# Individually crawling all the websites and extracting the necessary information
 def main_crawler():
     
     a = link_extractor()
